@@ -8,7 +8,7 @@ const TaskPlanner = () => {
   const [tasks, setTasks] = useState([]);
 
   const fetchTasks = () => {
-    fetch("http://localhost:8000/tasks")
+    fetch("https://server-theta-drab.vercel.app/tasks")
       .then((response) => response.json())
       .then((data) => setTasks(data))
       .catch((error) => console.error("Error:", error));
@@ -32,7 +32,7 @@ const TaskPlanner = () => {
           <h1 className=" font-medium">
             TO DO ({tasks.filter((task) => task.status === "todo").length})
           </h1>
-          <button onClick={handleOpen}>+</button>
+          <button className=" font-bold text-xl bg-blue-400 rounded-full w-6 h-6 flex items-center justify-center " onClick={handleOpen}>+</button>
 
           <Modal show={show} handleClose={handleClose}>
             <AddTask handleClose={handleClose} fetchTasks={fetchTasks} />

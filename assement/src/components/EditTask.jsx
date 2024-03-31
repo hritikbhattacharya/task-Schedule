@@ -16,7 +16,7 @@ const EditTask = ({ task, handleClose }) => {
 
     console.log("hello");
 
-    fetch(`http://localhost:8000/taskUpdate`, {
+    fetch(`https://server-theta-drab.vercel.app/taskUpdate`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",

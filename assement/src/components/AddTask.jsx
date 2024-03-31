@@ -7,7 +7,7 @@ const AddTask = ({ handleClose, fetchTasks }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    fetch("http://localhost:8000/task", {
+    fetch("https://server-theta-drab.vercel.app/task", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

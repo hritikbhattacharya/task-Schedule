@@ -21,7 +21,7 @@ const Task = ({ task, index, fetchTasks, handleCloseBox }) => {
   //   console.log(typeof fetchTasks);
 
   const handleDelete = (taskId) => {
-    fetch(`http://localhost:8000/task`, {
+    fetch(`https://server-theta-drab.vercel.app/task`, {
       method: "DELETE",
       headers: {
         "Content-Type": "application/json",
